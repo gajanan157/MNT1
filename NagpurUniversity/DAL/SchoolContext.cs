@@ -27,6 +27,13 @@ namespace NagpurUniversity.DAL
          .Map(t => t.MapLeftKey("CourseID")
              .MapRightKey("InstructorID")
              .ToTable("CourseInstructor"));
+            modelBuilder.Entity<Department>().MapToStoredProcedures();
         }
+
+        public System.Data.Entity.DbSet<NagpurUniversity.Models.Department> Departments { get; set; }
+
+        public System.Data.Entity.DbSet<NagpurUniversity.Models.Instructor> Instructors { get; set; }
+
+        public System.Data.Entity.DbSet<NagpurUniversity.Models.OfficeAssignment> OfficeAssignments { get; set; }
     }
 }

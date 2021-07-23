@@ -133,8 +133,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CourseController.cs" />
-    <Compile Include="Controllers\EnrollmentController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="DAL\SchoolConfiguration.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
@@ -146,13 +147,9 @@
     </Compile>
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Logger.cs" />
-    <Compile Include="Migrations\202107221402497_InitialCreate.cs" />
-    <Compile Include="Migrations\202107221402497_InitialCreate.Designer.cs">
-      <DependentUpon>202107221402497_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202107221600549_MaxLengthOnNames.cs" />
-    <Compile Include="Migrations\202107221600549_MaxLengthOnNames.Designer.cs">
-      <DependentUpon>202107221600549_MaxLengthOnNames.cs</DependentUpon>
+    <Compile Include="Migrations\202107231304057_InitialCreate.cs" />
+    <Compile Include="Migrations\202107231304057_InitialCreate.Designer.cs">
+      <DependentUpon>202107231304057_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
@@ -162,7 +159,9 @@
     <Compile Include="Models\OfficeAssignment.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AssignedCourseData.cs" />
     <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
+    <Compile Include="ViewModels\InstructorIndexData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -216,6 +215,16 @@
     <Content Include="Views\Enrollment\Details.cshtml" />
     <Content Include="Views\Enrollment\Edit.cshtml" />
     <Content Include="Views\Enrollment\Index.cshtml" />
+    <Content Include="Views\Instructor\Create.cshtml" />
+    <Content Include="Views\Instructor\Delete.cshtml" />
+    <Content Include="Views\Instructor\Details.cshtml" />
+    <Content Include="Views\Instructor\Edit.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Department\Create.cshtml" />
+    <Content Include="Views\Department\Delete.cshtml" />
+    <Content Include="Views\Department\Details.cshtml" />
+    <Content Include="Views\Department\Edit.cshtml" />
+    <Content Include="Views\Department\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -234,11 +243,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202107221402497_InitialCreate.resx">
-      <DependentUpon>202107221402497_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107221600549_MaxLengthOnNames.resx">
-      <DependentUpon>202107221600549_MaxLengthOnNames.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107231304057_InitialCreate.resx">
+      <DependentUpon>202107231304057_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
